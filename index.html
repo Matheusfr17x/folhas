@@ -8,11 +8,13 @@
     <title>Deploy TM</title>
 </head>
 <body>
+    
     <div class="container" style="text-align: center;">
         <div class="jumbotron" style="background-color:#2f9e41; color:white;">
             <h1>IFSULDEMINAS - Teachable Machine Image Model</h1>
             <p>Campus Machado </p>
-       </div>  
+        </div> 
+   
 <button type="button" onclick="init()">Start</button>
 <div id="webcam-container"></div>
 <div id="label-container"></div>
@@ -20,6 +22,27 @@
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
 <script src="script.js"></script>
 
+<div class="load-image">
+    <img id="preview" src="image1.png" width="250" alt="" />
+  </div>
+  <div class="send-image">
+    <label for="image_ts">
+      <p id="location-src">Clique para adicionar sua imagem</p>
+      <input
+        type="file"
+        name="image"
+        id="image_ts"
+        onchange="previewImage()"
+      />
+    </label>
+    <button class="btn" onclick="init()">Enviar</button>
+</div>
+<div class="display-4"  id="label-container"></div>
+
+
+<footer class="panel-footer" style="text-align:center; background-color:#2f9e41; color:white;"> 
+    Todos direitos reservados - Departamento de Computação - IFSULDEMINAS - Campus Machado
+</footer>
     </div>
 </body>
 </html>
